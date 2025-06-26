@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    background-color: green;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.hero {
+    padding-top: 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.hero p {
+    margin: 1.5em 0;
+}
+
+.hero a {
+    background-color: goldenrod;
+}
