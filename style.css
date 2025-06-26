@@ -29,4 +29,15 @@ ul {
 
 .hero {
     padding-top: 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.hero p {
+    margin: 1.5em 0;
+}
+
+.hero a {
+    background-color: goldenrod;
 }
