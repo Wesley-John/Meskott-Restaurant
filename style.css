@@ -8,6 +8,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     scroll-behavior: smooth;
+    padding-top: 130px;
 }
 
 nav {
@@ -17,6 +18,7 @@ nav {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    top: 0;
 
     padding: 1.5em;
 }
@@ -28,10 +30,15 @@ ul {
 }
 
 .hero {
-    padding-top: 70px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
 }
 
 .hero p {
