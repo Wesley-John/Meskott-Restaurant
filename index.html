@@ -46,29 +46,83 @@
     </nav>
   </header>
 
-  <section class="h-screen bg-[url(img/Hero2.avif)] bg-cover bg-center relative">
-    <div class="flex items-start justify-start h-full">
-      <div class="mt-60 ml-40 m-6 flex flex-col items-start text-left space-y-6 text-[#C99A56]
-      mt-20 md:mt-60 ml-4 md:ml-40 m-4 md:m-6">
-        <h1 class="text-5xl font-bold">Welcome to Meskotte <br>
-            Culinary Restaurant <br>
-            Experience
-        </h1>
-        <p class="text-base max-w-md">
-          Discover our menu, story, and signature dishes that bring people together.
-        </p>
-        <div class="flex gap-4">
-          <button class="bg-[#C99A56] text-black px-6 py-3 rounded hover:bg-[#1c3b41] border font-bold text-2xl">
-            Explore Menu
-          </button>
-          <button class="text-[#C99A56] px-6 py-3 rounded hover:bg-gray-200 border border-[#C99A56] font-bold text-2xl
-          px-4 py-2 md:px-6 md:py-3 text-lg md:text-2xl">
-            Book Now
-          </button>
-        </div>
+  <section class="relative w-full h-screen overflow-hidden bg-[url('img/5.png')] bg-cover bg-center">
+    
+    <div id="carousel" class="absolute inset-0 w-full h-full">
+      <img src="img/5.png" class="slide hidden w-full h-full object-cover" />
+      <img src="img/Hero2.avif" class="slide hidden w-full h-full object-cover" />
+      <img src="img/Placeholder Image.png" class="slide hidden w-full h-full object-cover" />
+    </div>
+  
+    
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+  
+   
+    <div class="absolute top-1/2 left-6 md:left-24 -translate-y-1/2 z-10 text-[#C99A56] space-y-6 ">
+      <h1 id="typewriter" class="text-3xl md:text-5xl font-bold"></h1>
+      <p class="text-sm md:text-base max-w-md">
+        Discover our menu, story, and signature dishes that bring people together.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button class="bg-[#C99A56] text-black px-6 py-2 rounded font-bold hover:bg-[#1c3b41]">
+          Explore Menu
+        </button>
+        <button class="text-[#C99A56] border border-[#C99A56] px-6 py-2 rounded font-bold hover:bg-gray-200">
+          Book Now
+        </button>
       </div>
     </div>
   </section>
+
+  <section class="bg-[#0B1517] py-16 px-4 flex flex-col items-center text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#F4A950] mb-10">
+      Meet OUR AI Meski
+    </h2>
+  
+    <div class="bg-[#DBA25F] rounded-lg p-4 md:p-6 max-w-2xl w-full shadow-lg">
+        <div class="bg-[#245B66] rounded-md p-4 space-y-3 text-sm md:text-base text-black font-medium min-h-[250px] flex flex-col gap-4">
+          
+          
+          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-start ">
+            Hey, Meski! Recommend me some Dishes From Meskott
+          </div>
+          
+          
+          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-end mb-10">
+            What other Dishes Would You Recommend?
+          </div>
+          
+         
+          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-start mt-10">
+            I would Recommend Our Signature Dishes Like Our Grilled Rib Eye Steak
+          </div>
+          
+          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-end mt-10">
+            I would also recommend our Winter Soup. So creamy and delicious.
+          </div>
+      
+        </div>
+      </div>
+    
+      <div class="border-b-white">
+        <hr class="border-t-2 border-[#F4A950] w-1/2 mx-auto my-6" />
+      </div>
+      
+      <div class="flex mt-4 bg-[#F4A950] rounded-md overflow-hidden w-full max-w-md ">
+        <input
+          type="text"
+          placeholder="Ask Meski Anything About Meskotte..."
+          class="w-full px-4 py-2 text-black placeholder-black focus:outline-none bg-[#F4A950]"
+          
+        />
+        <button class="bg-[#0B1517] hover:bg-[#132325] text-[#F4A950] px-4">
+          ▶
+        </button>
+      </div>
+    
+  </section>
+  
+  
   
   
   
@@ -80,6 +134,36 @@
     hamburger.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
-  </script>
+
+  // Simple carousel auto-slider
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.add("hidden"));
+    slides[current].classList.remove("hidden");
+    current = (current + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 4000);
+  showSlide(); // Initial display
+
+  // Typewriter animation
+  const typeText = "Welcome to Meskotte Culinary Experience";
+  const typeBox = document.getElementById("typewriter");
+  let i = 0;
+
+  function typeWriter() {
+    if (i < typeText.length) {
+      typeBox.innerHTML += typeText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
+  }
+
+  typeWriter();
+</script>
+
+
 </body>
 </html>
