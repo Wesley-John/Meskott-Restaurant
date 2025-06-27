@@ -194,7 +194,7 @@
       menu.classList.toggle('hidden');
     });
 
-  // Simple carousel auto-slider
+  //carousel 
   const slides = document.querySelectorAll(".slide");
   let current = 0;
 
@@ -221,6 +221,27 @@
   }
 
   typeWriter();
+
+    document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const terms = document.getElementById("terms").checked;
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (!terms) {
+      alert("Please accept the terms.");
+      return;
+    }
+
+    alert("Dear, thank you for your feedback!");
+    this.reset();
+  });
 </script>
 
 
