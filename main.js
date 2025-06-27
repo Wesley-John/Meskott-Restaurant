@@ -13,3 +13,15 @@ function typeWriter() {
 }
 
 document.addEventListener('DOMContentLoaded', typeWriter);
+
+/* Carousel Segment */
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".carousel-slide");
+let currentIndex = 0;
+
+function moveToNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+setInterval(moveToNextSlide, 4000);

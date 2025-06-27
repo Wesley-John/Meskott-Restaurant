@@ -22,11 +22,19 @@
             </nav>
 
             <article class="hero">
-                <div>
+                <div class="carousel-background">
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="img/hero.jpg" class="carousel-image"></div>
+                        <div class="carousel-slide"><img src="img/meskott-hero1.jpeg" class="carousel-image"></div>
+                        <div class="carousel-slide"><img src="img/messkott-hero2.jpeg" class="carousel-image"></div>
+                        <div class="carousel-slide"><img src="img/meskott-hero3.jpeg" class="carousel-image"></div>
+                    </div>
+                </div>
+                <div class="hero-content">
                     <h1 id="h1-el"></h1>
                     <p>Indulge in a culinary journey that celebrates freshness and culture. Discover the unique flavors that make our dishes unforgettable.</p>
-                <a href="#">Explore</a>
-                <a href="#">Book Now</a>
+                    <a href="#">Explore</a>
+                    <a href="#">Book Now</a>
                 </div>
             </article>
         </header>
@@ -134,17 +142,17 @@
                         <p>
                             <label for="name">Name:</label>
                             <br>
-                            <input type="text" placeholder="Enter your name..." required autocomplete="on" autofocus id="name" name="name">
+                            <input type="text" placeholder="Enter your name..." required autocomplete="on"  id="name" name="name">
                         </p>
                         <p>
                             <label for="email">Email: </label>
                             <br>
-                            <input type="email" placeholder="Enter your email..." required autocomplete="on" autofocus id="email" name="email">
+                            <input type="email" placeholder="Enter your email..." required autocomplete="on"  id="email" name="email">
                         </p>
                         <p>
                             <label for="tel">Email: </label>
                             <br>
-                            <input type="tel" placeholder="Enter your email..." autocomplete="on" autofocus id="tel" name="tel">
+                            <input type="tel" placeholder="Enter your email..." autocomplete="on"  id="tel" name="tel">
                         </p>
                         <p>
                             <label for="message">Message: </label>
@@ -172,7 +180,7 @@
                 <p>Subscribe to our newsletter for the latest updates on our culinery offerings.</p>
                 <form action="https://httpbin.org/get" method="get">
                     <fieldset>
-                        <input type="email" name="email" id="email" required autofocus autocomplete="on" placeholder="Enter your email...">
+                        <input type="email" name="email" id="email" required  autocomplete="on" placeholder="Enter your email...">
                     </fieldset>
                     <button>Join</button>
                 </form>
