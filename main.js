@@ -25,3 +25,15 @@ function moveToNextSlide() {
 }
 
 setInterval(moveToNextSlide, 4000);
+
+/* Form Confirmation Message */
+const form = document.querySelector("form");
+const message = document.getElementById("confirmation-message");
+
+form.addEventListener("submit", function(){
+    message.style.display = "block";
+    form.reset();
+    setTimeout(() => {
+        message.style.display = "none"
+    }, 5000);
+});

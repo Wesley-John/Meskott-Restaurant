@@ -136,7 +136,7 @@
                     </figcaption>
                 </figure>
                 <h2>Reach Out</h2>
-                <form action="https://httpbin.org/get" method="get">
+                <form action="https://httpbin.org/get" method="get" target="submitFrame">
                     <fieldset>
                         <legend>We'd Love to Hear from you.</legend>
                         <p>
@@ -150,25 +150,28 @@
                             <input type="email" placeholder="Enter your email..." required autocomplete="on"  id="email" name="email">
                         </p>
                         <p>
-                            <label for="tel">Email: </label>
+                            <label for="tel">Phone: </label>
                             <br>
-                            <input type="tel" placeholder="Enter your email..." autocomplete="on"  id="tel" name="tel">
+                            <input type="tel" placeholder="Enter your phone number..." autocomplete="on"  id="tel" name="tel">
                         </p>
                         <p>
                             <label for="message">Message: </label>
                             <br>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here" required></textarea>
                         </p>
                     </fieldset>
                     <fieldset>
                         <p>
-                            <input type="checkbox" name="terms" id="terms" value="terms">
+                            <input type="checkbox" name="terms" id="terms" value="terms" required>
                             <label for="terms">I accept the <a href="#">terms</a></label>
                         </p>
                     </fieldset>
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                 </form>
+                <p id="confirmation-message" style="display: none; color: green; font-weight: bold;">
+                ✅ Thank you! Your message has been received.
+                </p>
             </section>
         </main>
 
@@ -217,5 +220,6 @@
             </ul>
         </footer>
         <script src="main.js"></script>
+        <iframe name="submitFrame" style="display:none;"></iframe>
     </body>
 </html>
