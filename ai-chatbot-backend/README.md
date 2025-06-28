@@ -166,3 +166,4 @@ This backend was developed on a feature branch and merged into a shared fullstac
 - ✅ Git feature branching
 - ✅ Pull requests with code reviews
 - ✅ Clean merge into main branch
+https://meskott-restaurant-production.up.railway.app/

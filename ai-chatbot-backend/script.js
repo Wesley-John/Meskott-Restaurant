@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
    const input = document.getElementById("user-input");
    const chatBox = document.getElementById("chat-box");
 
-   const backendURL = "https://YOUR-LIVE-BACKEND-URL/chat"; // 🔁 Replace this once you deploy backend
+
+   const backendURL = "https://meskott-restaurant-production.up.railway.app/ ";
 
    form.addEventListener("submit", async (event) => {
       event.preventDefault();
