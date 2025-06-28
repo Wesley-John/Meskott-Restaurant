@@ -15,16 +15,14 @@ function typeWriter() {
 document.addEventListener('DOMContentLoaded', typeWriter);
 
 /* Carousel Segment */
-const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".carousel-slide");
-let currentIndex = 0;
+const carousel = document.getElementById('carousel');
+let index = 0;
+const totalSlides = carousel.children.length;
 
-function moveToNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-setInterval(moveToNextSlide, 4000);
+setInterval(() => {
+index = (index + 1) % totalSlides;
+carousel.style.transform = `translateX(-${index * 100}%)`;
+}, 4000);
 
 /* Form Confirmation Message */
 const form = document.querySelector("form");

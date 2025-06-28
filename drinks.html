@@ -9,90 +9,107 @@
         <link rel="icon" href="img/logo.png" type="image/x-icon">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-[#12272b] text-white font-sans">
+    <body class="dark:bg-[#12272b] bg-[#4f6b7c] text-white font-sans">
         <!-- Navbar -->
-        <header class="bg-[#12272b] py-6">
-            <nav class="h-32 mx-auto px-6 flex items-center justify-between fixed z-50 bg-[#12272b] py-6 w-full top-0">
-            <ul class="flex gap-6">
-                <li><a href="#" class="hover:text-yellow-500">Home</a></li>
-                <li class="relative group">
-                <a href="#" class="hover:text-yellow-500">Menu</a>
-                <ul class="absolute top-full left-0 bg-[#1c3a3f] text-sm hidden group-hover:block mt-1 rounded shadow-lg">
-                    <li><a href="starters.html" class="block px-4 py-2 hover:bg-[#244a51]">Starters</a></li>
-                    <li><a href="main-dishes.html" class="block px-4 py-2 hover:bg-[#244a51]">Main Dishes</a></li>
-                    <li><a href="desserts.html" class="block px-4 py-2 hover:bg-[#244a51]">Desserts</a></li>
-                    <li><a href="drinks.html" class="block px-4 py-2 hover:bg-[#244a51]">Drinks</a></li>
+        <header class="p-4 bg-[#0B1517] text-[#C99A56]">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <div class="flex items-center gap-4  ">
+                <img src="img/logo.png" alt="Logo" class="h-10" />
+                <button id="theme-toggle" class="p-2 rounded hover:bg-yellow-700" aria-label="Toggle Theme">
+                🌙 / ☀️
+                </button>
+            </div>
+
+            
+            <ul id="menu" class="hidden flex-col md:flex md:flex-row md:gap-6 text-sm absolute md:static top-16 left-0 w-full md:w-auto bg-[#12272B] md:bg-transparent rounded md:rounded-none z-20">
+                <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Home</a></li>
+                <li class="group relative">
+                <a href="#menu" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Menu ▾</a>
+                <ul class="hidden group-hover:block bg-[#1e3940] text-white rounded shadow-lg w-40 absolute top-full left-0 z-30">
+                    <li><a href="starters.html" class="block px-4 py-2 hover:bg-gray-700">Starters</a></li>
+                    <li><a href="main-dishes.html" class="block px-4 py-2 hover:bg-gray-700">Main Dishes</a></li>
+                    <li><a href="drinks.html" class="block px-4 py-2 hover:bg-gray-700">Drinks</a></li>
+                    <li><a href="desserts.html" class="block px-4 py-2 hover:bg-gray-700">Desserts</a></li>
                 </ul>
                 </li>
-                <li><a href="index.html#contact" class="hover:text-yellow-500">Feedback</a></li>
+                <li><a href="index.html#ourstory" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Our Story</a></li>
+                <li><a href="index.html#dishes" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Signature Dishes</a></li>
+                <li><a href="index.html#contact" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Feedback Form</a></li>
             </ul>
-            <img src="img/logo.png" alt="Meskotte Logo" class="w-28 h-auto">
-            <button class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">Book Now</button>
+
+            
+            <button class="hidden md:block bg-[#12272B] px-4 py-2 rounded hover:bg-[#1c3b41]">
+                Book Now
+            </button>
+
+            
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5 focus:outline-none">
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+            </button>
             </nav>
         </header>
         <main>
-             <article>
-                <h2>Drinks</h2>
+             <section id="drinks" class="max-w-7xl mx-auto px-6 py-16">
+                <h2 class="text-center text-3xl font-semibold text-yellow-500 mb-12">Drinks</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <figure>
-                    <img width="300px" height="365px" loading="lazy" src="img/pinotage.jpg">
-                    <figcaption>Pinotage Red Wine
-                        <br>
-                        Bayed, The Prime Royal Signature Selection, SA</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="img/chateau.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Chateau Haut-Bages Red Wine
-                        <br>
-                        Saint-Emillion, Grand Cru, France</figcaption>
-                </figure>
+                    <!-- Drink Card -->
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/pinotage.jpg" alt="Pinotage Red Wine" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Pinotage Red Wine</p>
+                    <p class="text-sm text-gray-400">Bayed, The Prime Royal Signature Selection, SA</p>
+                    </div>
 
-                <figure>
-                    <img src="img/terraires.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Les Terraires Red Wine
-                        <br>
-                        Merlot 2026, pays Doc, France</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/chateau.jpg" alt="Chateau Haut-Bages Red Wine" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Chateau Haut-Bages Red Wine</p>
+                    <p class="text-sm text-gray-400">Saint-Emillion, Grand Cru, France</p>
+                    </div>
 
-                <figure>
-                    <img src="img/bottega.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Bottega Prosecco Sparkling
-                        <br>
-                        Vintage 2021, Italy</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/terraires.jpg" alt="Les Terraires Red Wine" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Les Terraires Red Wine</p>
+                    <p class="text-sm text-gray-400">Merlot 2026, Pays d'Oc, France</p>
+                    </div>
 
-                <figure>
-                    <img src="img/moet.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Moet and Chandon Champagne
-                        <br>
-                        Imperal Brut, France</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="img/puces.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Les Puces Red Wine
-                        <br>
-                        Cooked in charcoal, Garlic cream</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/bottega.jpg" alt="Bottega Prosecco" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Bottega Prosecco Sparkling</p>
+                    <p class="text-sm text-gray-400">Vintage 2021, Italy</p>
+                    </div>
 
-                <figure>
-                    <img src="img/perrier.jpeg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Perrier Sparkling Water
-                        <br>
-                        Natural, mineral water, France</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/moet.jpg" alt="Moet and Chandon Champagne" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Moet and Chandon Champagne</p>
+                    <p class="text-sm text-gray-400">Imperial Brut, France</p>
+                    </div>
 
-                <figure>
-                    <img src="img/mimosa.jpeg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Mimosa Cocktail
-                        <br>
-                        Orange juice and champagne or sparkling wine
-                    </figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/puces.jpg" alt="Les Puces Red Wine" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Les Puces Red Wine</p>
+                    <p class="text-sm text-gray-400">Cooked in charcoal, Garlic cream</p>
+                    </div>
 
-                <a href="#">View All</a>
-            </article>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/perrier.jpeg" alt="Perrier Sparkling Water" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Perrier Sparkling Water</p>
+                    <p class="text-sm text-gray-400">Natural, mineral water, France</p>
+                    </div>
+
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/mimosa.jpeg" alt="Mimosa Cocktail" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Mimosa Cocktail</p>
+                    <p class="text-sm text-gray-400">Orange juice and champagne or sparkling wine</p>
+                    </div>
+
+                </div>
+                <div class="text-center mt-8">
+                    <a href="#" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">View All Drinks</a>
+                </div>
+            </section>
         </main>
         <footer class="bg-[#0d1a1d] text-white py-12 mt-16">
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">

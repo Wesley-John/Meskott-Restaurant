@@ -9,89 +9,108 @@
         <link rel="icon" href="img/logo.png" type="image/x-icon">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-[#12272b] text-white font-sans">
-        <header class="bg-[#12272b] py-6">
-            <nav class="h-32 mx-auto px-6 flex items-center justify-between fixed z-50 bg-[#12272b] py-6 w-full top-0">
-            <ul class="flex gap-6">
-                <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
-                <li class="relative group">
-                <a href="#" class="hover:text-yellow-500">Menu</a>
-                <ul class="absolute top-full left-0 bg-[#1c3a3f] text-sm hidden group-hover:block mt-1 rounded shadow-lg">
-                    <li><a href="starters.html" class="block px-4 py-2 hover:bg-[#244a51]">Starters</a></li>
-                    <li><a href="main-dishes.html" class="block px-4 py-2 hover:bg-[#244a51]">Main Dishes</a></li>
-                    <li><a href="desserts.html" class="block px-4 py-2 hover:bg-[#244a51]">Desserts</a></li>
-                    <li><a href="drinks.html" class="block px-4 py-2 hover:bg-[#244a51]">Drinks</a></li>
+    <body class="dark:bg-[#12272b] bg-[#4f6b7c] text-white font-sans">
+        <header class="p-4 bg-[#0B1517] text-[#C99A56]">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <div class="flex items-center gap-4  ">
+                <img src="img/logo.png" alt="Logo" class="h-10" />
+                <button id="theme-toggle" class="p-2 rounded hover:bg-yellow-700" aria-label="Toggle Theme">
+                🌙 / ☀️
+                </button>
+            </div>
+
+            
+            <ul id="menu" class="hidden flex-col md:flex md:flex-row md:gap-6 text-sm absolute md:static top-16 left-0 w-full md:w-auto bg-[#12272B] md:bg-transparent rounded md:rounded-none z-20">
+                <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Home</a></li>
+                <li class="group relative">
+                <a href="#menu" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Menu ▾</a>
+                <ul class="hidden group-hover:block bg-[#1e3940] text-white rounded shadow-lg w-40 absolute top-full left-0 z-30">
+                    <li><a href="starters.html" class="block px-4 py-2 hover:bg-gray-700">Starters</a></li>
+                    <li><a href="main-dishes.html" class="block px-4 py-2 hover:bg-gray-700">Main Dishes</a></li>
+                    <li><a href="drinks.html" class="block px-4 py-2 hover:bg-gray-700">Drinks</a></li>
+                    <li><a href="desserts.html" class="block px-4 py-2 hover:bg-gray-700">Desserts</a></li>
                 </ul>
                 </li>
-                <li><a href="index.html#contact" class="hover:text-yellow-500">Feedback</a></li>
+                <li><a href="index.html#ourstory" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Our Story</a></li>
+                <li><a href="index.html#dishes" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Signature Dishes</a></li>
+                <li><a href="index.html#contact" class="block px-4 py-2 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-300">Feedback Form</a></li>
             </ul>
-            <img src="img/logo.png" alt="Meskotte Logo" class="w-28 h-auto">
-            <button class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">Book Now</button>
+
+            
+            <button class="hidden md:block bg-[#12272B] px-4 py-2 rounded hover:bg-[#1c3b41]">
+                Book Now
+            </button>
+
+            
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5 focus:outline-none">
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+            </button>
             </nav>
         </header>
         <main>
-             <article>
-                <h2>Main Dishes</h2>
+             <section id="main-dishes" class="max-w-7xl mx-auto px-6 py-16">
+                <h2 class="text-center text-3xl font-semibold text-yellow-500 mb-12">Main Dishes</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <figure>
-                    <img width="300px" height="365px" loading="lazy" src="img/chicken-rice.jpg">
-                    <figcaption>Singaporean Chicken Rice Set
-                        <br>
-                        Boiled Chicken Breast Served with Chicken Rice, Sliced Cucumber and Chili Sauce</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="img/provencale.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Grilled Chicken Breast Provencale
-                        <br>
-                        Mediterranean vegetables, mashed potato and garlic aloi</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/chicken-rice.jpg" alt="Singaporean Chicken Rice" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Singaporean Chicken Rice Set</p>
+                    <p class="text-sm text-gray-400">Boiled Chicken Breast, Chicken Rice, Sliced Cucumber & Chili Sauce</p>
+                    </div>
 
-                <figure>
-                    <img src="img/lamb.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Lamb Tangine
-                        <br>
-                        Moroccan Braised Lamb</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/provencale.jpg" alt="Grilled Chicken Provencale" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Grilled Chicken Breast Provencale</p>
+                    <p class="text-sm text-gray-400">Mediterranean Vegetables, Mashed Potato & Garlic Aioli</p>
+                    </div>
 
-                <figure>
-                    <img src="img/braised-beef.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Braised Beef Skank
-                        <br>
-                        Fresh Beef Cut Braised in Honey</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/lamb.jpg" alt="Lamb Tangine" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Lamb Tangine</p>
+                    <p class="text-sm text-gray-400">Moroccan Braised Lamb</p>
+                    </div>
 
-                <figure>
-                    <img src="img/noodles.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Singaporean Stir Fried Noodles
-                        <br>
-                        Noodles Stir Fried to perfection</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="img/satay.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Chicken Satay
-                        <br>
-                        Skewed Chicken with Mushroom Sauce</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/braised-beef.jpg" alt="Braised Beef Shank" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Braised Beef Shank</p>
+                    <p class="text-sm text-gray-400">Fresh Beef Cut Braised in Honey</p>
+                    </div>
 
-                <figure>
-                    <img src="img/spaghetti.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Spaghetti Ala Carbonara
-                        <br>
-                        Spaghetti with our secret carbonara sauce</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/noodles.jpg" alt="Stir Fried Noodles" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Singaporean Stir Fried Noodles</p>
+                    <p class="text-sm text-gray-400">Noodles Stir Fried to Perfection</p>
+                    </div>
 
-                <figure>
-                    <img src="img/grilled-steak.jpg" width="300px" height="365px" loading="lazy">
-                    <figcaption>Grilled Rib Eye Stake
-                        <br>
-                        Rib Eye with garlic and rosemary.</figcaption>
-                </figure>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/satay.jpg" alt="Chicken Satay" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Chicken Satay</p>
+                    <p class="text-sm text-gray-400">Skewered Chicken with Mushroom Sauce</p>
+                    </div>
 
-                <a href="#">View All</a>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/spaghetti.jpg" alt="Spaghetti Ala Carbonara" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Spaghetti Ala Carbonara</p>
+                    <p class="text-sm text-gray-400">Spaghetti with Our Secret Carbonara Sauce</p>
+                    </div>
 
-            </article>
+                    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="img/grilled-steak.jpg" alt="Grilled Rib Eye Steak" class="rounded-xl mb-4 w-full h-[365px] object-cover">
+                    <p class="font-semibold">Grilled Rib Eye Steak</p>
+                    <p class="text-sm text-gray-400">Rib Eye with Garlic and Rosemary</p>
+                    </div>
+
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-8">
+                    <a href="#" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">View All Main Dishes</a>
+                </div>
+            </section>
+
         </main>
         <footer class="bg-[#0d1a1d] text-white py-12 mt-16">
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
