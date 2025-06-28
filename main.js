@@ -55,3 +55,77 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', currentTheme);
   });
 });
+
+/*Chatbot*/
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".chatbot-toggle");
+  const chatbot = document.getElementById("chatbot");
+  const sendBtn = document.getElementById("send-btn");
+  const input = document.getElementById("user-input");
+  const chatBox = chatbot.querySelector(".chat-box");
+
+  // Replace with your actual deployed backend endpoint
+  const backendURL = "https://your-backend-domain.com/chat";
+
+  // Toggle chatbot visibility
+  toggleBtn.addEventListener("click", () => {
+    chatbot.classList.toggle("hidden");
+  });
+
+  // Handle send button click
+  sendBtn.addEventListener("click", async () => {
+    const message = input.value.trim();
+    if (!message) return;
+
+    addMessage("You", message);
+    input.value = "";
+    input.disabled = true;
+    document.getElementById("loading-indicator").classList.remove("hidden")
+
+    try {
+      const response = await fetch(backendURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user_question: message }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Server error");
+      }
+
+      const data = await response.json();
+      addMessage("Meski AI", data.reply);
+    } catch (err) {
+      addMessage("Meski AI", "⚠️ Oops, something went wrong. Please try again.");
+    } finally {
+        input.disabled = false;
+        input.focus();
+        document.getElementById("loading-indicator").classList.add("hidden");
+    }
+  });
+
+  // Allow Enter key to send
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendBtn.click();
+    }
+  });
+
+  // Display chat messages in the box
+  function addMessage(sender, text) {
+    const messageElem = document.createElement("div");
+    messageElem.classList.add("mb-2", "text-sm");
+    messageElem.innerHTML = `<strong>${sender}:</strong> ${text}`;
+    chatBox.appendChild(messageElem);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+});
+
+const closeBtn = document.getElementById("chatbot-close");
+
+closeBtn.addEventListener("click", () => {
+  chatbot.classList.add("hidden");
+});
