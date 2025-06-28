@@ -57,264 +57,187 @@
   
     
     <div class="absolute inset-0 bg-black/50 z-0"></div>
-  
-   
-    <div class="absolute top-1/2 left-6 md:left-24 -translate-y-1/2 z-10 text-[#C99A56] space-y-6 ">
-      <h1 id="typewriter" class="text-3xl md:text-5xl font-bold"></h1>
-      <p class="text-sm md:text-base max-w-md">
-        Discover our menu, story, and signature dishes that bring people together.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <button class="bg-[#C99A56] text-black px-6 py-2 rounded font-bold hover:bg-[#1c3b41]">
-          Explore Menu
-        </button>
-        <button class="text-[#C99A56] border border-[#C99A56] px-6 py-2 rounded font-bold hover:bg-gray-200">
-          Book Now
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class="story bg-[#0B1517] w-full px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center max-w-6xl mx-auto gap-10">
-      
-      
-      <div class="text-white space-y-6 text-left" id="story">
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight">
-          Experience Culinary <br />
-          Excellence at Meskott
-        </h1>
-        <p class="text-base leading-relaxed">
-          At Meskott, we believe in crafting unforgettable dining experiences<br />
-          rooted in tradition and innovation. Our passion for fresh ingredients<br />
-          and diverse culinary influences shapes every dish we serve.
-        </p>
-        <button class="learn bg-[#C99A56] text-black font-bold px-6 py-3 rounded hover:bg-[#1c3b41] transition">
-          Learn More
-        </button>
-      </div>
 
-      
-  
-      
-      <div class="flex justify-center">
-        <img src="img/Placeholder Image.png" alt="Delicious Dish" class="w-full max-w-sm rounded shadow-lg" />
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="w-full h-[500px] relative">
+      <div class="absolute inset-0 flex">
+        <div class="w-full h-full flex-shrink-0 animate-fade-in">
+          <img src="img/hero.jpg" alt="Hero" class="w-full h-full object-cover">
+        </div>
       </div>
-  
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="text-center text-white px-6">
+          <h1 class="text-4xl font-bold mb-4">Indulge in a Culinary Journey</h1>
+          <p class="mb-6">Celebrating freshness and culture. Discover the unique flavors that make our dishes unforgettable.</p>
+          <div class="flex justify-center gap-4">
+            <a href="#" class="bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Explore</a>
+            <a href="#" class="bg-transparent border border-yellow-600 px-4 py-2 rounded hover:bg-yellow-600 hover:text-white">Book Now</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="bg-[#0B1517] py-16 px-6 text-white">
+
+  <!-- Experience Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Experience Culinary Excellence at Meskott</h2>
+      <p class="text-gray-300">At Meskott, we believe in crafting unforgettable dining experiences rooted in tradition and innovation. Our passion for fresh ingredients and diverse culinary influences shapes every dish we serve.</p>
+      <button class="mt-6 bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Learn More</button>
+    </div>
+    <img src="img/hero2.jpg" alt="Restaurant" class="rounded-xl shadow-lg">
+  </section>
+
+  <!-- Signature Dishes -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
     <h2 class="text-center text-3xl font-semibold text-yellow-500 mb-12">Signature Dishes</h2>
-  
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
       <!-- Dish Card -->
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/spagetti ala carbonara.jpg" alt="Carbonara Pasta" class="rounded-xl mb-4 w-full h-auto">
+        <img src="img/carbonara-pasta.jpeg" alt="Carbonara Pasta" class="rounded-xl mb-4 w-full h-300">
+
         <p class="font-semibold">Carbonara Pasta</p>
         <p class="text-sm text-gray-400">Creamy cheese with parmesan</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/samosa, chill honey dip.jpg" alt="Spaghetti Marinara" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/spaghetti.jpg" alt="Spaghetti Marinara" class="rounded-xl mb-4 w-360 h-300">
         <p class="font-semibold">Spaghetti Marinara</p>
         <p class="text-sm text-gray-400">Fresh tomato, basil & garlic</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/chicken satay.jpg" alt="Grilled Salmon" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/satay.jpg" alt="Grilled Salmon" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Grilled Salmon</p>
         <p class="text-sm text-gray-400">Served with lemon butter sauce</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/avocado green salad.jpg" alt="Steak Frites" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/grilled-steak.jpg" alt="Steak Frites" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Steak Frites</p>
         <p class="text-sm text-gray-400">Ribeye with crispy fries</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/braised beef shank.jpg" alt="Chicken Alfredo" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/braised-beef.jpg" alt="Chicken Alfredo" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Chicken Alfredo</p>
         <p class="text-sm text-gray-400">Creamy white sauce and herbs</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/chicken soup.jpg" alt="Sushi Platter" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/tuna.jpg" alt="Sushi Platter" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Sushi Platter</p>
         <p class="text-sm text-gray-400">Fresh nigiri and maki rolls</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/deboned bbq beef ribs.jpg" alt="Vegan Bowl" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/avocado.jpg" alt="Vegan Bowl" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Vegan Bowl</p>
         <p class="text-sm text-gray-400">Quinoa, kale, and avocado</p>
       </div>
   
       <div class="text-center transform transition-transform duration-300 hover:scale-105">
-        <img src="img/grilled organic fillet of beef.jpg" alt="Lamb Chops" class="rounded-xl mb-4 w-full h-auto">
+
+        <img src="img/grilled-steak.jpg" alt="Lamb Chops" class="rounded-xl mb-4 w-360 h-300">
+
         <p class="font-semibold">Lamb Chops</p>
         <p class="text-sm text-gray-400">Mint yogurt and roasted veggies</p>
       </div>
     </div>
 
-  <section class="bg-[#0B1517] py-16 px-4 flex flex-col items-center text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#F4A950] mb-10">
-      Meet OUR AI Meski
-    </h2>
-  
-    <div class="bg-[#DBA25F] rounded-lg p-4 md:p-6 max-w-2xl w-full shadow-lg">
-        <div class="bg-[#245B66] rounded-md p-4 space-y-3 text-sm md:text-base text-black font-medium min-h-[250px] flex flex-col gap-4">
-          
-          
-          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-start ">
-            Hey, Meski! Recommend me some Dishes From Meskott
-          </div>
-          
-          
-          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-end mb-10">
-            What other Dishes Would You Recommend?
-          </div>
-          
-         
-          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-start mt-10">
-            I would Recommend Our Signature Dishes Like Our Grilled Rib Eye Steak
-          </div>
-          
-          <div class="bg-white rounded-md px-3 py-2 max-w-[70%] self-end mt-10">
-            I would also recommend our Winter Soup. So creamy and delicious.
-          </div>
-      
-        </div>
-      </div>
-    
-      <div class="border-b-white">
-        <hr class="border-t-2 border-[#F4A950] w-1/2 mx-auto my-6" />
-      </div>
-      
-      <div class="flex mt-4 bg-[#F4A950] rounded-md overflow-hidden w-full max-w-md ">
-        <input
-          type="text"
-          placeholder="Ask Meski Anything About Meskotte..."
-          class="w-full px-4 py-2 text-black placeholder-black focus:outline-none bg-[#F4A950]"
-          
-        />
-        <button class="bg-[#0B1517] hover:bg-[#132325] text-[#F4A950] px-4">
-          ▶
-        </button>
-      </div>
-    
+    <div class="text-center mt-8">
+      <a href="#" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">View All</a>
+    </div>
   </section>
-  <div class="max-w-full w-full bg-[#12272B] shadow-lg overflow-hidden flex flex-col md:flex-row">
-  
-    
-    <div class="md:w-1/2 w-full">
-      <img src="img/map.png" alt="Map" class="w-[600px] h-[600px] object-cover m-6" />
+
+  <!-- Feedback Section -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3100937810414!2d38.7626815!3d9.0354516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8fc97ab42f7d%3A0x275a0c3b207ed252!2sMeskott%20Culinary%20Experience!5e0!3m2!1sen!2ske!4v1751078873335!5m2!1sen!2ske" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="450" class="rounded shadow-md border-2 border-yellow-600"></iframe>
+    <form action="https://httpbin.org/get" method="get" target="submitFrame" class="space-y-4">
+      <h2 class="text-2xl text-yellow-500 font-semibold">Give Feedback</h2>
+      <p class="text-sm text-gray-400">We'd love to hear from you!</p>
+      <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-2 border border-yellow-600 bg-transparent text-white rounded">
+      <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 border border-yellow-600 bg-transparent text-white rounded">
+      <textarea name="message" rows="5" placeholder="Type your message..." required class="w-full px-4 py-2 border border-yellow-600 bg-transparent text-white rounded"></textarea>
+      <label class="flex items-center gap-2 text-sm">
+        <input type="checkbox" required class="accent-yellow-600">
+        I accept the <a href="#" class="text-yellow-500 underline">Terms</a>
+      </label>
+      <button type="submit" class="bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Submit</button>
+    </form>
+  </section>
+
+  <!-- Chatbot Section -->
+  <section class="fixed bottom-6 right-6 z-50">
+    <button class="chatbot-toggle bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded shadow">💬 Meski AI</button>
+    <div class="chatbot-container hidden bg-[#1a2b2e] text-white w-80 p-4 rounded shadow-lg mt-2" id="chatbot">
+      <div class="chat-header border-b border-yellow-600 pb-2 mb-4">
+        <h2 class="text-lg font-semibold">Ask Meski AI</h2>
+      </div>
+      <div class="chat-box h-40 overflow-y-auto mb-4"></div>
+      <div class="chat-input flex gap-2">
+        <input type="text" id="user-input" placeholder="Ask me anything about Meskotte..." class="flex-1 px-3 py-2 rounded border border-yellow-600 bg-transparent">
+        <button id="send-btn" class="bg-yellow-600 px-3 py-2 rounded hover:bg-yellow-700">Send</button>
+      </div>
     </div>
-    <div class="md:w-1/2 w-full p-8">
-      <header class="mb-4">
-        <h2 class="text-4xl font-semibold uppercase tracking-wide text-[#C99A56]">Give Feedback</h2>
-      </header>
-      <h1 class="text-2xl mb-6 text-[#C99A56]">We'd love to hear from you!</h1>
-      
-      <form id="feedbackForm" class="space-y-4">
-        <div>
-          <label for="name" class="block mb-1">Name</label>
-          <input
-            type="text"
-            id="name"
-            class="w-full px-4 py-2 rounded bg-[#0F1F23] border border-transparent focus:outline-none text-[#C99A56] placeholder-[#C99A56]"
-            placeholder="Your Name"
-          />
-        </div>
-  
-        <div>
-          <label for="email" class="block mb-1">Email</label>
-          <input
-            type="email"
-            id="email"
-            class="w-full px-4 py-2 rounded bg-[#0F1F23] border border-transparent focus:outline-none text-[#C99A56] placeholder-[#C99A56]"
-            placeholder="you@example.com"
-          />
-        </div>
-  
-        <div>
-          <label for="message" class="block mb-1">Message</label>
-          <textarea
-            id="message"
-            rows="4"
-            class="w-full px-4 py-2 rounded bg-[#0F1F23] border border-transparent focus:outline-none text-[#C99A56] placeholder-[#C99A56]"
-            placeholder="Your message..."
-          ></textarea>
-        </div>
-  
-        <div class="flex items-center space-x-2">
-          <input type="checkbox" id="terms" class="accent-[#C99A56]" />
-          <label for="terms" class="text-sm">I accept terms</label>
-        </div>
-  
-        <button
-          type="submit"
-          class="mt-4 bg-[#C99A56] text-[#12272B] font-semibold px-6 py-2 rounded hover:bg-[#e0b06a] transition"
-        >
-          Submit
-        </button>
-      </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0d1a1d] text-white py-12 mt-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="img/logo.png" alt="Meskotte logo" class="w-20 mb-4">
+        <p class="text-sm text-gray-300 mb-4">Subscribe to our newsletter for the latest updates on our culinary offerings.</p>
+        <form action="https://httpbin.org/get" method="get" class="flex flex-col gap-2">
+          <input type="email" name="email" placeholder="Enter your email..." required class="px-4 py-2 rounded border border-yellow-600 bg-transparent text-white">
+          <button class="bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Join</button>
+        </form>
+        <p class="text-xs text-gray-400 mt-2">By joining, you consent to receive updates in accordance with our privacy policy.</p>
+      </div>
+      <div>
+        <p class="text-lg font-semibold text-yellow-500 mb-2">Quick Links</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-yellow-500">Home Page</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Our Menu</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Our Story</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Feedback Form</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-lg font-semibold text-yellow-500 mb-2">Connect With Us</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-yellow-500">Facebook</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Instagram</a></li>
+          <li><a href="#" class="hover:text-yellow-500">X</a></li>
+          <li><a href="#" class="hover:text-yellow-500">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-yellow-500">YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-lg font-semibold text-yellow-500 mb-2">Stay Updated</p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-yellow-500">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Cookie Settings</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-    <footer>
-            <section>
-                <img src="img/logo.png" alt="Meskotte logo" width="80px" loading="lazy">
-                <p>Subscribe to our newsletter for the latest updates on our culinery offerings.</p>
-                <form action="https://httpbin.org/get" method="get">
-                    <fieldset>
-                        <input type="email" name="email" id="email" required  autocomplete="on" placeholder="Enter your email...">
-                    </fieldset>
-                    <button>Join</button>
-                </form>
-                <p>By joining, you consent to receive updates in accordance with our privacy policy.</p>
-            </section>
-            <section class="quick-links">
-                <p>Quick Links</p>
-                <ul>
-                    <li><a href="">Home Page</a></li>
-                    <li><a href="">Our Menu</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Our Story</a></li>
-                    <li><a href="">Feedback Form</a></li>
-                </ul>
-            </section>
-            <section class="connect">
-                <p>Connect With Us</p>
-                <ul>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">X</a></li>
-                    <li><a href="">Linkdin</a></li>
-                    <li><a href="">YouTube</a></li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <p>&copy; 2025 Meskotte Culinary. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Cookie Settings</a></li>
-            </ul>
-        </footer>
-        <script src="main.js"></script>
-        <iframe name="submitFrame" style="display:none;"></iframe>
-    
-
-
-  
-  
-  
-  
-  
-  
-  
-
+    <div class="text-center text-xs text-gray-500 mt-12">&copy; 2025 Meskotte Culinary. All rights reserved.</div>
+  </footer>
   <script>
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
@@ -372,7 +295,5 @@
     this.reset();
   });
 </script>
-
-
-
-        
+</body>
+</html>
