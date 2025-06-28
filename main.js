@@ -37,3 +37,23 @@ form.addEventListener("submit", function(){
         message.style.display = "none"
     }, 5000);
 });
+
+/* Dark and Light mode toggle */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleThemeBtn = document.getElementById('theme-toggle');
+  const rootElement = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+
+  // Apply saved theme on load
+  if (savedTheme === 'dark') {
+    rootElement.classList.add('dark');
+  }
+
+  // Toggle theme on click
+  toggleThemeBtn?.addEventListener('click', () => {
+    rootElement.classList.toggle('dark');
+
+    const currentTheme = rootElement.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+  });
+});

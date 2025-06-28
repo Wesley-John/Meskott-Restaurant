@@ -7,27 +7,27 @@
         <title>Meskotte Restaurant</title>
 
         <link rel="icon" href="img/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-
-                    <li class="dropdown">
-                    <a href="#">Menu</a>
-                    <ul class="dropdown-content">
-                        <li><a href="starters.html">Starters</a></li>
-                        <li><a href="main-dishes.html">Main Dishes</a></li>
-                        <li><a href="drinks.html">Drinks</a></li>
-                    </ul>
-                    </li>
-
-                    <li><a href="#">Feedback</a></li>
+    <body class="bg-[#12272b] text-white font-sans">
+        <!-- Navbar -->
+        <header class="bg-[#12272b] py-6">
+            <nav class="h-32 mx-auto px-6 flex items-center justify-between fixed z-50 bg-[#12272b] py-6 w-full top-0">
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
+                <li class="relative group">
+                <a href="#" class="hover:text-yellow-500">Menu</a>
+                <ul class="absolute top-full left-0 bg-[#1c3a3f] text-sm hidden group-hover:block mt-1 rounded shadow-lg">
+                    <li><a href="starters.html" class="block px-4 py-2 hover:bg-[#244a51]">Starters</a></li>
+                    <li><a href="main-dishes.html" class="block px-4 py-2 hover:bg-[#244a51]">Main Dishes</a></li>
+                    <li><a href="desserts.html" class="block px-4 py-2 hover:bg-[#244a51]">Desserts</a></li>
+                    <li><a href="drinks.html" class="block px-4 py-2 hover:bg-[#244a51]">Drinks</a></li>
                 </ul>
-                <img src="img/logo.png" alt="Meskotte Logo" width="110px" height="85px">
-                <button>Book Now</button>
+                </li>
+                <li><a href="index.html#contact" class="hover:text-yellow-500">Feedback</a></li>
+            </ul>
+            <img src="img/logo.png" alt="Meskotte Logo" class="w-28 h-auto">
+            <button class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">Book Now</button>
             </nav>
         </header>
         <main>
@@ -79,47 +79,47 @@
                 <a href="#">View All</a>
             </article>
         </main>
-        <footer>
-            <section>
-                <img src="img/logo.png" alt="Meskotte logo" width="80px" loading="lazy">
-                <p>Subscribe to our newsletter for the latest updates on our culinery offerings.</p>
-                <form action="https://httpbin.org/get" method="get">
-                    <fieldset>
-                        <input type="email" name="email" id="email" required autocomplete="on" placeholder="Enter your email...">
-                    </fieldset>
-                    <button>Join</button>
+        <footer class="bg-[#0d1a1d] text-white py-12 mt-16">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <img src="img/logo.png" alt="Meskotte logo" class="w-20 mb-4">
+                <p class="text-sm text-gray-300 mb-4">Subscribe to our newsletter for the latest updates on our culinary offerings.</p>
+                <form action="https://httpbin.org/get" method="get" class="flex flex-col gap-2">
+                <input type="email" name="email" placeholder="Enter your email..." required class="px-4 py-2 rounded border border-yellow-600 bg-transparent text-white">
+                <button class="bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Join</button>
                 </form>
-                <p>By joining, you consent to receive updates in accordance with our privacy policy.</p>
-            </section>
-            <section class="quick-links">
-                <p>Quick Links</p>
-                <ul>
-                    <li><a href="">Home Page</a></li>
-                    <li><a href="">Our Menu</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Our Story</a></li>
-                    <li><a href="">Feedback Form</a></li>
+                <p class="text-xs text-gray-400 mt-2">By joining, you consent to receive updates in accordance with our privacy policy.</p>
+            </div>
+            <div>
+                <p class="text-lg font-semibold text-yellow-500 mb-2">Quick Links</p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="#" class="hover:text-yellow-500">Home Page</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Our Menu</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Our Story</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Feedback Form</a></li>
                 </ul>
-            </section>
-            <section class="connect">
-                <p>Connect With Us</p>
-                <ul>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">X</a></li>
-                    <li><a href="">Linkdin</a></li>
-                    <li><a href="">YouTube</a></li>
+            </div>
+            <div>
+                <p class="text-lg font-semibold text-yellow-500 mb-2">Connect With Us</p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="#" class="hover:text-yellow-500">Facebook</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Instagram</a></li>
+                <li><a href="#" class="hover:text-yellow-500">X</a></li>
+                <li><a href="#" class="hover:text-yellow-500">LinkedIn</a></li>
+                <li><a href="#" class="hover:text-yellow-500">YouTube</a></li>
                 </ul>
-            </section>
-
-            <hr>
-
-            <p>&copy; 2025 Meskotte Culinary. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Cookie Settings</a></li>
-            </ul>
+            </div>
+            <div>
+                <p class="text-lg font-semibold text-yellow-500 mb-2">Stay Updated</p>
+                <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="#" class="hover:text-yellow-500">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-yellow-500">Cookie Settings</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-center text-xs text-gray-500 mt-12">&copy; 2025 Meskotte Culinary. All rights reserved.</div>
         </footer>
         <script src="main.js"></script>
     </body>
