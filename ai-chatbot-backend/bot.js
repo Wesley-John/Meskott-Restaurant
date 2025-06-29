@@ -21,7 +21,7 @@ chatForm.addEventListener("submit", async (e) => {
    const question = userInput.value.trim();
 
    if (!question) {
-      chatBox.innerHTML += `<p><strong>You:</strong> Please enter a message.</p>`;
+      chatBox.innerHTML += `<p><strong>You:</strong> Please enter a valid question.</p>`;
       return;
    }
 
@@ -42,7 +42,7 @@ chatForm.addEventListener("submit", async (e) => {
       const data = await response.json();
       chatBox.innerHTML += `<p><strong>Meski AI:</strong> ${data.reply}</p>`;
    } catch (err) {
-      chatBox.innerHTML += `<p><strong>Error:</strong> Something went wrong.</p>`;
+      chatBox.innerHTML += `<p><strong>Error:</strong> Something went wrong while getting your answer.</p>`;
    } finally {
       loadingIndicator.classList.add("hidden");
       chatBox.scrollTop = chatBox.scrollHeight;
