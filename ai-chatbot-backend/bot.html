@@ -1,0 +1,42 @@
+<!-- Chatbot Section -->
+<section class="fixed bottom-6 right-6 z-50">
+   <!-- Toggle Button -->
+   <button
+      class="chatbot-toggle bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+      aria-controls="chatbot" aria-expanded="false">
+      💬 Meski AI
+   </button>
+
+   <!-- Chatbot Container -->
+   <div id="chatbot"
+      class="chatbot-container hidden mt-3 w-80 bg-[#1a2b2e] text-white p-4 rounded-xl shadow-xl transition-all"
+      role="dialog" aria-labelledby="chatbot-title">
+      <!-- Header -->
+      <header class="flex items-center justify-between border-b border-yellow-600 pb-2 mb-4">
+         <h2 id="chatbot-title" class="text-lg font-semibold">Ask Meski AI</h2>
+         <button id="chatbot-close" class="text-yellow-500 hover:text-yellow-600 text-xl font-bold focus:outline-none"
+            aria-label="Close chat">
+            &times;
+         </button>
+      </header>
+
+      <!-- Chat messages -->
+      <div class="chat-box h-64 overflow-y-auto mb-4 px-1 space-y-2 text-sm scroll-smooth" id="chat-box"
+         aria-live="polite">
+         <div id="loading-indicator" class="hidden text-sm text-yellow-400 italic">
+            Meski AI is typing<span class="animate-pulse">...</span>
+         </div>
+      </div>
+
+      <!-- Input Row -->
+      <form id="chat-form" class="chat-input flex gap-2">
+         <label for="user-input" class="sr-only">Type your message</label>
+         <input type="text" id="user-input" autocomplete="off" placeholder="Ask me anything about Meskotte..."
+            class="flex-1 px-3 py-2 rounded border border-yellow-600 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-600" />
+         <button id="send-btn" type="submit"
+            class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            Send
+         </button>
+      </form>
+   </div>
+</section>
