@@ -28,4 +28,3 @@ bin/
 obj/
 Dockerfile.dev
 Dockerfile.test
-
