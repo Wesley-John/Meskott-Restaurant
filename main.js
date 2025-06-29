@@ -1,52 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-   const form = document.getElementById("chat-form");
-   const input = document.getElementById("user-input");
-   const chatBox = document.getElementById("chat-box");
+const chatbotToggle = document.querySelector(".chatbot-toggle");
+const chatbotContainer = document.getElementById("chatbot");
+const chatbotClose = document.getElementById("chatbot-close");
+const chatBox = document.getElementById("chat-box");
+const chatForm = document.getElementById("chat-form");
+const userInput = document.getElementById("user-input");
+const loadingIndicator = document.getElementById("loading-indicator");
 
+const backendUrl = "https://meskott-chatbott.onrender.com/chat";
 
-   const backendURL = "https://meskott-restaurant-production.up.railway.app/ ";
+chatbotToggle.addEventListener("click", () => {
+   chatbotContainer.classList.toggle("hidden");
+});
 
-   form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+chatbotClose.addEventListener("click", () => {
+   chatbotContainer.classList.add("hidden");
+});
 
-      const message = input.value.trim();
-      if (!message) {
-         alert("Please enter a question.");
-         return;
-      }
+chatForm.addEventListener("submit", async (e) => {
+   e.preventDefault();
+   const question = userInput.value.trim();
 
-      addMessage("You", message);
-      input.value = "";
-      input.disabled = true;
+   if (!question) {
+      chatBox.innerHTML += `<p><strong>You:</strong> Please enter a message.</p>`;
+      return;
+   }
 
-      try {
-         const response = await fetch(backendURL, {
-            method: "POST",
-            headers: {
-               "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ user_question: message }),
-         });
+   chatBox.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
+   userInput.value = "";
 
-         if (!response.ok) {
-            throw new Error("Server error");
-         }
+   loadingIndicator.classList.remove("hidden");
 
-         const data = await response.json();
-         addMessage("MeskottBot", data.reply);
-      } catch (error) {
-         addMessage("MeskottBot", "Sorry, something went wrong. Try again.");
-      } finally {
-         input.disabled = false;
-         input.focus();
-      }
-   });
+   try {
+      const response = await fetch(backendUrl, {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify({ user_question: question })
+      });
 
-   function addMessage(sender, text) {
-      const messageElem = document.createElement("div");
-      messageElem.classList.add("message");
-      messageElem.innerHTML = `<strong>${sender}:</strong> ${text}`;
-      chatBox.appendChild(messageElem);
+      const data = await response.json();
+      chatBox.innerHTML += `<p><strong>Meski AI:</strong> ${data.reply}</p>`;
+   } catch (err) {
+      chatBox.innerHTML += `<p><strong>Error:</strong> Something went wrong.</p>`;
+   } finally {
+      loadingIndicator.classList.add("hidden");
       chatBox.scrollTop = chatBox.scrollHeight;
    }
 });
