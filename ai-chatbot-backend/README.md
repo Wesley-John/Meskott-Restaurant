@@ -26,9 +26,11 @@ The chatbot can answer questions about:
 - 📞 Contact information  
 - 🧾 How to book/reserve  
 - 🥗 Dietary and special menu options  
-- ❤️ Brand story and values  
 
 ---
+## 🏙️ Live Deployment
+
+- 🔗 **Backend URL:** [https://meskott-chatbott.onrender.com](https://meskott-chatbott.onrender.com)
 
 ## 📁 Project Structure
 
@@ -107,15 +109,6 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 > You can deploy the backend easily to [Render](https://render.com).
 
-### Render Settings
-
-| Setting         | Value                              |
-|-----------------|------------------------------------|
-| **Language**    | Python                             |
-| **Build Cmd**   | `pip install -r requirements.txt`  |
-| **Start Cmd**   | `uvicorn app.main:app --host 0.0.0.0 --port 8000` |
-| **Root Dir**    | *(leave blank if structure is flat)* |
-| **Env Vars**    | `GEMINI_API_KEY = your_api_key_here` |
 
 ---
 
@@ -137,7 +130,7 @@ Sends a user question and receives a response from the AI chatbot.
 
 ```json
 {
-  "reply": "We are open Monday to Saturday from 8am to 10pm."
+  "reply": "Hello there! Meskott is open during these hours: * **Monday to Friday:** 8:00 AM – 10:00 PM * **Saturday & Sunday:** 9:00 AM – 11:00 PM We look forward to welcoming you!"
 }
 ```
 
@@ -166,4 +159,3 @@ This backend was developed on a feature branch and merged into a shared fullstac
 - ✅ Git feature branching
 - ✅ Pull requests with code reviews
 - ✅ Clean merge into main branch
-https://meskott-restaurant-production.up.railway.app/
