@@ -64,7 +64,7 @@ const chatForm = document.getElementById("chat-form");
 const userInput = document.getElementById("user-input");
 const loadingIndicator = document.getElementById("loading-indicator");
 
-const backendUrl = "https://meskott-chatbott.onrender.com/chat";
+const backendUrl = "https://ai-chatbot-backend-peacefulwhitecat.onrender.com";
 
 chatbotToggle.addEventListener("click", () => {
    chatbotContainer.classList.toggle("hidden");
